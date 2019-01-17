@@ -9,20 +9,17 @@ public class Gaussian {
 //rozmiar tablicy
         int n=segmentsNb + 1;
 
-//A do rozwiazania
 
-
-//A Lowa
         double copyA [][] = new double [A.length][A.length];
 
-//kopiuj A do rozwiazania do Ay Lowej
+//kopiuj A do rozwiazania do copyA
+
         for (int i = 0; i<A.length; i++)
             for (int j = 0; j<A.length; j++)
                 copyA[i][j]=A[i][j];
 
 
-
-//kopiuj wektor
+//kopiuj wektor wyników
         double wCopy [] = new double [L.length];
         for (int i=0; i<L.length; i++){
             wCopy[i]=L[i];
@@ -55,7 +52,7 @@ public class Gaussian {
             }
         }
 
-//Wypisanie Lu
+//Wypisanie wyników
         System.out.println("");
         System.out.println("");
         for (int j = 0; j<n; j++){

@@ -8,7 +8,7 @@ public class ApproximateFunction {
     private int h;
     private BaseFunction [] functions;
 
-    public ApproximateFunction(int segmentsNb, int k){
+    public ApproximateFunction(int segmentsNb, double k){
         creator = new MatrixCreator(segmentsNb,k);
         result = gaus.getResult(creator.createMatrixA(), creator.createMatrixF(), segmentsNb);
         this.segmentsNb = segmentsNb;
