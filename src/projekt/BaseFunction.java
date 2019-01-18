@@ -10,32 +10,20 @@ public class BaseFunction {
         a = new double[nbOfSegments];
         b = new double[nbOfSegments];
         h = 1 / (double) nbOfSegments;
-        this.segmentNb = segmentNb;
+        this.segmentNb = nbOfSegments;
+        for(int i = 0 ; i<nbOfSegments; i++)
+            a[i] = b[i] = 0;
 
-        if (segmentNb == nbOfSegments) {  // definiowanie ostatniej funkcji która nie jest tozsamosciowo rowna zero na zadnym przediale
-            for (int i = 0; i < nbOfSegments; i++) {
-                if (i % 2 == 0) {
-                    a[i] = (1 / h);
-                    b[i] = -i;
-                } else {
-                    a[i] = (-1 / h);
-                    b[i] = 1 + i;
-                }
-            }
-        } else {  // definiowanie wszystkich funkcji
-            for (int i = 0; i < nbOfSegments; i++) {
-                a[i] = 0;
-                b[i] = 0;
-            }
-            if (segmentNb % 2 != 0) {
-                a[segmentNb] = (1 / h);
-                b[segmentNb] = -segmentNb;
-            } else {
-                a[segmentNb] = (-1 / h);
-                b[segmentNb] = 1 + segmentNb;
-            }
-
+        if (segmentNb - 1 >= 0 ) {
+            a[segmentNb - 1] = nbOfSegments;
+            b[segmentNb - 1] = -(segmentNb - 1);
         }
+        if(segmentNb < nbOfSegments ){
+            a[segmentNb] = -nbOfSegments;
+            b[segmentNb] = segmentNb + 1;
+        }
+
+
     }
 
     public double getA(int segmentNb) {
@@ -48,7 +36,7 @@ public class BaseFunction {
 
     public double value(double x) {
         for (int i = 0; i < segmentNb; i++)
-            if (x > i * h && x <= (i + 1) * h)
+            if (x >= i * h && x <= (i + 1) * h)
                 return a[i] * x + b[i];
         return 0;
     }

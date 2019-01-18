@@ -33,6 +33,12 @@ public class Gaussian {
             System.out.println("");
         }
         System.out.println("");
+        //wyniki
+        for (int k=0; k<n; k++){
+            System.out.print(L[k]+"\t");
+        }
+        System.out.println("");
+
 
 //Metoda Eliminacji Gaussa
         for (int i = 0; i<n-1; i++){

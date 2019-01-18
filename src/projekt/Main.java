@@ -33,9 +33,8 @@ public class Main {
         }
 
         ApproximateFunction u = new ApproximateFunction(n, k);
-        System.out.println(u.getValue(0.2));
 
-        final Chart chart = new Chart("Równanie konwekcji-dyfuzji",u);
+        final Chart chart = new Chart( "Równanie konwekcji-dyfuzji " + "(k=  " + k + " , n= " + n +")",u);
         chart.pack();
         RefineryUtilities.centerFrameOnScreen(chart);
         chart.setVisible(true);

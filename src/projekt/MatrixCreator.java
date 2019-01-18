@@ -1,5 +1,6 @@
 package projekt;
 
+
 public class MatrixCreator {
     private int nbOfSegments;
     private BaseFunction[] functions;
@@ -14,6 +15,7 @@ public class MatrixCreator {
 
         for (int i = 0; i <= nbOfSegments; i++)
             functions[i] = new BaseFunction(nbOfSegments, i);
+        System.out.println(functions[0].getA(0) + " " + functions[0].getB(0));
     }
 
     public double[][] createMatrixA() {
@@ -24,35 +26,40 @@ public class MatrixCreator {
         return result;
     }
 
-    public double [] createMatrixF(){
-        double [] result = new double [nbOfSegments + 1];
-        for(int i = 0; i< nbOfSegments + 1 ; i++)
-            result [i] = calculateLIIntegrate(functions[i]);
+    public double[] createMatrixF() {
+        double[] result = new double[nbOfSegments + 1];
+        for (int i = 0; i < nbOfSegments + 1; i++)
+            result[i] = calculateLIIntegrate(functions[i]);
 
         return result;
     }
 
     private double calculateBIJIntegrate(BaseFunction ei, BaseFunction ej) {
         double result = 0;
-        for (int i = 0; i < nbOfSegments; i++) // rozbicie całki na segmenty
-            result += ei.getA(i) * (h * (ej.getB(i) + k * ej.getA(i)) +
-                    0.5 * ej.getA(i) * (h * h * (i + 1) * (i + 1) - h * h * i * i));
-
+        for (int i = 0; i < nbOfSegments; i++) {
+            result += 0.5 * ei.getA(i) * ej.getA(i) * ((i + 1) * (i + 1) * h * h - i * i * h * h);
+            result += ei.getA(i) * ej.getB(i) * h;
+            result += ei.getA(i) * ej.getB(i) * h;
+        }
         return result;
     }
 
     private double calculateLIIntegrate(BaseFunction ei) {
         double result = 0;
         for (int i = 0; i < nbOfSegments; i++) {
-            result += (1.0 / 3.0) * (Math.pow(h, 3) * Math.pow(i + 1, 3) - Math.pow(h, 3) * Math.pow(i, 3)) * ei.getA(i);
-            result += h * (5 * k * ei.getA(i) - 5 * ei.getB(i));
-            result += 0.5 * (h * h * (i + 1) * (i + 1) - h * h * i * i);
+            /// [x] = h
+            /// [x^2/2] = 0.5* (h*h*(i+1)*(i+1) - h*h*i*i)
+            /// [x^3/3] = 1/3 *(h*h*h*(i+1)*(i+1)*(i+1) - h*h*h*i*i*i)
+            result += -(5 * ei.getA(i) * 0.5 * (h * h * (i + 1) * (i + 1) - h * h * i * i) + 5 * ei.getB(i) * h);
+            result += 5 * k * ei.getA(i) * h;
+            result += 5 * ei.getA(i) * 1 / 3 * (h * h * h * (i + 1) * (i + 1) * (i + 1) - h * h * h * i * i * i) + 5 * ei.getB(i) * 0.5 * (h * h * (i + 1) * (i + 1) - h * h * i * i);
         }
-        result += k * ei.value(1);
+        result += 3 * k * ei.value(1);
 
         return result;
     }
-    public BaseFunction[] getFunctions(){
+
+    public BaseFunction[] getFunctions() {
         return functions;
     }
 }
