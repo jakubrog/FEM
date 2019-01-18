@@ -15,7 +15,6 @@ public class MatrixCreator {
 
         for (int i = 0; i <= nbOfSegments; i++)
             functions[i] = new BaseFunction(nbOfSegments, i);
-        System.out.println(functions[0].getA(0) + " " + functions[0].getB(0));
     }
 
     public double[][] createMatrixA() {
@@ -37,10 +36,14 @@ public class MatrixCreator {
     private double calculateBIJIntegrate(BaseFunction ei, BaseFunction ej) {
         double result = 0;
         for (int i = 0; i < nbOfSegments; i++) {
-            result += 0.5 * ei.getA(i) * ej.getA(i) * ((i + 1) * (i + 1) * h * h - i * i * h * h);
+          /*  result += ei.getA(i) * ej.getA(i) * 0.5* (h*h*(i+1)*(i+1) - h*h*i*i);
             result += ei.getA(i) * ej.getB(i) * h;
-            result += ei.getA(i) * ej.getB(i) * h;
+            result += k * ei.getA(i) * ej.getA(i) * h ; */ // wersja z messsengera
+            result+= k*ei.getA(i)*ej.getA(i) * h;
+            result += (-1) * ei.getA(i) * ej.getA(i) * 0.5* (h*h*(i+1)*(i+1) - h*h*i*i);
+            result += (-1) * ei.getB(i) * ej.getA(i) * h;
         }
+        result += ei.value(1)*ej.value(1);
         return result;
     }
 
@@ -50,12 +53,18 @@ public class MatrixCreator {
             /// [x] = h
             /// [x^2/2] = 0.5* (h*h*(i+1)*(i+1) - h*h*i*i)
             /// [x^3/3] = 1/3 *(h*h*h*(i+1)*(i+1)*(i+1) - h*h*h*i*i*i)
-            result += -(5 * ei.getA(i) * 0.5 * (h * h * (i + 1) * (i + 1) - h * h * i * i) + 5 * ei.getB(i) * h);
-            result += 5 * k * ei.getA(i) * h;
-            result += 5 * ei.getA(i) * 1 / 3 * (h * h * h * (i + 1) * (i + 1) * (i + 1) - h * h * h * i * i * i) + 5 * ei.getB(i) * 0.5 * (h * h * (i + 1) * (i + 1) - h * h * i * i);
+            result += -5*ei.getA(i) * 0.5* (h*h*(i+1)*(i+1) - h*h*i*i);
+            result += -5*ei.getB(i) * h;
+            result += 5*k * ei.getA(i) * h ;
+            result += 5 * ei.getA(i) * 1/3 *(h*h*h*(i+1)*(i+1)*(i+1) - h*h*h*i*i*i);
+            result += 5 * ei.getB(i) * 0.5* (h*h*(i+1)*(i+1) - h*h*i*i); // z messengera
+           /* result += 5 * ei.getA(i) * 1/3 *(h*h*h*(i+1)*(i+1)*(i+1) - h*h*h*i*i*i);
+            result += (-1) * 5 * ei.getB(i) * h;
+            result += (-1) * 11 *ei.getA(i) * 0.5* (h*h*(i+1)*(i+1) - h*h*i*i);
+            result += 5*ei.getA(i) * h;
+            result += 5*k*ei.getA(i)*h; */
         }
         result += 3 * k * ei.value(1);
-
         return result;
     }
 
