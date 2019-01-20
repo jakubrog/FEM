@@ -15,7 +15,7 @@ public class Chart extends ApplicationFrame {
 
         super(title);
         final XYSeries series = new XYSeries("");
-        for(double i = 0.00; i <= 1; i+= 0.001)
+        for(double i = 0.00; i <= 1.0; i+= 0.01)
             series.add(i, u.getValue(i));
 
         final XYSeriesCollection data = new XYSeriesCollection(series);

@@ -8,11 +8,15 @@
   <component name="ChangeListManager">
     <list default="true" id="33ddd2df-844a-4642-9061-3db55cbf9423" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rrir2/projekt/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rrir2/projekt/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rrir2/projekt/ApproximateFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rrir2/projekt/ApproximateFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rrir2/projekt/BaseFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rrir2/projekt/BaseFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rrir2/projekt/Chart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rrir2/projekt/Chart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rrir2/projekt/Gaussian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rrir2/projekt/Gaussian.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/rrir2/projekt/MatrixCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rrir2/projekt/MatrixCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projekt/ApproximateFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt/ApproximateFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projekt/BaseFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt/BaseFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projekt/Chart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt/Chart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projekt/Gaussian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt/Gaussian.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/projekt/MatrixCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt/MatrixCreator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,20 +61,24 @@
     <session id="-60164968">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.23" value="2" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="776" />
+          <entry key="java" value="2118" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="776" />
+          <entry key="JAVA" value="2118" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -90,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projekt/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
+            <state relative-caret-position="180">
               <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projekt/Chart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="220">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projekt/ApproximateFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+            <state relative-caret-position="520">
+              <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -123,20 +131,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projekt/BaseFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+            <state relative-caret-position="381">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="22" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/projekt/MatrixCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-341">
-              <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+            <state relative-caret-position="440">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
               <folding>
-                <element signature="e#2787#2788#0" expanded="true" />
-                <element signature="e#2819#2820#0" expanded="true" />
+                <element signature="e#3013#3014#0" expanded="true" />
+                <element signature="e#3045#3046#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projekt/Gaussian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+            <state>
+              <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -184,12 +192,12 @@
         <option value="$PROJECT_DIR$/src/projekt/XYSeries.java" />
         <option value="$PROJECT_DIR$/src/projekt/x.java" />
         <option value="$PROJECT_DIR$/src/projekt/Gaus2.java" />
-        <option value="$PROJECT_DIR$/src/projekt/Gaussian.java" />
         <option value="$PROJECT_DIR$/src/projekt/Main.java" />
-        <option value="$PROJECT_DIR$/src/projekt/ApproximateFunction.java" />
-        <option value="$PROJECT_DIR$/src/projekt/MatrixCreator.java" />
+        <option value="$PROJECT_DIR$/src/projekt/Gaussian.java" />
         <option value="$PROJECT_DIR$/src/projekt/BaseFunction.java" />
+        <option value="$PROJECT_DIR$/src/projekt/ApproximateFunction.java" />
         <option value="$PROJECT_DIR$/src/projekt/Chart.java" />
+        <option value="$PROJECT_DIR$/src/projekt/MatrixCreator.java" />
       </list>
     </option>
   </component>
@@ -201,7 +209,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
-    <option name="width" value="1920" />
+    <option name="width" value="960" />
     <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -210,7 +218,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,6 +241,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,7 +250,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547804361850" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548001975708" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -298,11 +306,16 @@
       <workItem from="1547796318334" duration="8040000" />
       <workItem from="1547811206899" duration="659000" />
       <workItem from="1547817983566" duration="4358000" />
+      <workItem from="1547835292998" duration="522000" />
+      <workItem from="1547913419389" duration="1227000" />
+      <workItem from="1547978379274" duration="3420000" />
+      <workItem from="1547998245856" duration="3436000" />
+      <workItem from="1548003762175" duration="896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24118000" />
+    <option name="totallyTimeSpent" value="33619000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -317,7 +330,7 @@
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26040554" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09605123" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -388,16 +401,9 @@
     <entry file="file://$PROJECT_DIR$/src/projekt/XYSeries.java" />
     <entry file="file://$PROJECT_DIR$/src/projekt/x.java" />
     <entry file="file://$PROJECT_DIR$/src/projekt/Gaus2.java" />
-    <entry file="file://$PROJECT_DIR$/src/projekt/Gaussian.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/projekt/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
+        <state relative-caret-position="180">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -405,37 +411,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projekt/MatrixCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/projekt/Chart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-341">
-          <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+        <state relative-caret-position="220">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding>
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/projekt/BaseFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projekt/ApproximateFunction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+        <state relative-caret-position="520">
+          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projekt/Chart.java">
+    <entry file="file://$PROJECT_DIR$/src/projekt/Gaussian.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        <state>
+          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projekt/BaseFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projekt/MatrixCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3013#3014#0" expanded="true" />
+            <element signature="e#3045#3046#0" expanded="true" />
           </folding>
         </state>
       </provider>

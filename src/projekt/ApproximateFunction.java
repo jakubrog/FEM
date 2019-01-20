@@ -14,18 +14,18 @@ public class ApproximateFunction {
         result = gaus.getResult(creator.createMatrixA(), creator.createMatrixF(), segmentsNb);
 
         functions = creator.getFunctions();
-        //Matrix lhs = new Matrix(creator.createMatrixA());
-        //Matrix rhs = new Matrix(creator.createMatrixF(), functions.length);
-        //ans = lhs.solve(rhs);
+        Matrix lhs = new Matrix(creator.createMatrixA());
+        Matrix rhs = new Matrix(creator.createMatrixF(), functions.length);
+        ans = lhs.solve(rhs);
     }
 
     public double getValue(double x){
         double value = 0;
        // System.out.print("u(x) = ");
-        for(int j = 0 ; j < functions.length ; j++) {
-           value += functions[j].value(x) * result[j];
+        for(int j = 0 ; j < functions.length   ; j++) {
+           //value += functions[j].value(x) * result[j];
            // System.out.println("(a" + j + "X" + " b" +j +") * " + result[j] +" ");
-            //value += functions[j].value(j) * ans.get(j, 0);
+            value += functions[j].value(j) * ans.get(j, 0);
         }
 
         return value + (1-x)*5;

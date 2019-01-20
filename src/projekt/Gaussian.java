@@ -33,6 +33,7 @@ public class Gaussian {
             System.out.println("");
         }
         System.out.println("");
+
         //wyniki
         for (int k=0; k<n; k++){
             System.out.print(L[k]+"\t");
