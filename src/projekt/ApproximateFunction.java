@@ -2,17 +2,13 @@ package projekt;
 import Jama.Matrix;
 
 public class ApproximateFunction {
-    private Gaussian gaus = new Gaussian();
 
     private MatrixCreator creator;
-    private double [] result;
     private Matrix ans;
     private BaseFunction [] functions;
 
     public ApproximateFunction(int segmentsNb, double k){
         creator = new MatrixCreator(segmentsNb,k);
-        result = gaus.getResult(creator.createMatrixA(), creator.createMatrixF(), segmentsNb);
-
         functions = creator.getFunctions();
         Matrix lhs = new Matrix(creator.createMatrixA());
         Matrix rhs = new Matrix(creator.createMatrixF(), functions.length);
@@ -21,11 +17,8 @@ public class ApproximateFunction {
 
     public double getValue(double x){
         double value = 0;
-       // System.out.print("u(x) = ");
         for(int j = 0 ; j < functions.length   ; j++) {
-           //value += functions[j].value(x) * result[j];
-           // System.out.println("(a" + j + "X" + " b" +j +") * " + result[j] +" ");
-            value += functions[j].value(j) * ans.get(j, 0);
+            value += functions[j].value(x) * ans.get(j, 0);
         }
 
         return value + (1-x)*5;
