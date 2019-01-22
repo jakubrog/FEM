@@ -29,9 +29,9 @@ public class MatrixCreator {
                 result[i][j] = 0;
                 if (i == j)
                     result[i][j] = 2 * k * nbOfSegments;
-                if (i == j + 1)
+                if (i == j -1)
                     result[i][j] = 0.5 - k * nbOfSegments;
-                if (i == j - 1)
+                if (i == j + 1)
                     result[i][j] = -0.5 - k * nbOfSegments;
             }
         for (int i = 0; i < nbOfSegments + 1; i++){
@@ -86,6 +86,7 @@ public class MatrixCreator {
                         + 3 * k;
             }
         }
+        result[0] = 0;
         return result;
     }
 
