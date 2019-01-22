@@ -34,11 +34,14 @@ public class MatrixCreator {
                 if (i == j - 1)
                     result[i][j] = -0.5 - k * nbOfSegments;
             }
-        //for (int i = 0; i < nbOfSegments + 1; i++){
-       //     result[i][0] = 0;
-        //    result[0][i] = 0;
-       // }
-       // result[0][0] = 1;
+        for (int i = 0; i < nbOfSegments + 1; i++){
+           result[i][0] = 0;
+            result[0][i] = 0;
+        }
+        result[0][0] = 1;
+
+        result[nbOfSegments][nbOfSegments] = k*nbOfSegments + 0.5;
+
         for(int i =0 ; i<=nbOfSegments ;i++) {
             for (int j = 0; j <= nbOfSegments; j++)
                 System.out.print(result[i][j] + "    ");
@@ -82,9 +85,7 @@ public class MatrixCreator {
                         (h * h * i * i  - h * h * (i-1) * (i-1) ) * (5 * b - 5 * a) + h * (-5 * b + 5 * a)
                         + 3 * k;
             }
-            //   result[i] = (5.0*i - 10.0 *nbOfSegments )/(2.0*nbOfSegments*nbOfSegments) + 5.0/nbOfSegments;
         }
-        // result[nbOfSegments] += 3 * k ;
         return result;
     }
 

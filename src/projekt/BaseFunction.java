@@ -31,7 +31,7 @@ public class BaseFunction {
         if (x == 0)
             return 0;
         for (int i = 0; i < segmentNb; i++)
-            if (x > i * h && x <= (i + 1) * h)
+            if (x >= i * h && x < (i + 1) * h)
                 return a[i] * x + b[i];
         return 0;
     }
