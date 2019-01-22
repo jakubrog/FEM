@@ -41,13 +41,13 @@ public class MatrixCreator {
         result[0][0] = 1;
 
         result[nbOfSegments][nbOfSegments] = k*nbOfSegments + 0.5;
-
+/*
         for(int i =0 ; i<=nbOfSegments ;i++) {
             for (int j = 0; j <= nbOfSegments; j++)
                 System.out.print(result[i][j] + "    ");
             System.out.println(" ");
         }
-
+*/
         return result;
     }
 
